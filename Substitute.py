@@ -15,8 +15,8 @@ def denc(ciphertext,s_table):
         else:
             plaintext=plaintext+i
     return plaintext
-ciphertext=input("Enter text to decrypt : \n").upper()
-print("Decrypting....")
-for key in range(1,27):
+ciphertext=input("Enter text to Encode/Decode : \n").upper()
+print("Substituting with all keys 1 through 25....")
+for key in range(1,26):
     print("Trying",key,"as substitution cipher key :")
     print(denc(ciphertext,generate_table(key)))
